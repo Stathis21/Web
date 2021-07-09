@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>Paint</title>
+        <link rel="stylesheet" type = "text/css" href = "new_style.css">
+        <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+        <!-- <meta name="viewport" content="width=1000; user-scalable=0;" /> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=0.4, user-scalable= 0" />
+        <!-- <meta name="viewport" content="initial-scale=1, maximum-scale=1"> -->
+    </head>
+    <body>
+        <div id = "test" style="font-size: 40px; font-weight: bold; padding: 50px">HELLO</div>
+        
+        
+        
+        <div class = "SideToolBar">
+            <div class ="tool" data-btn = "add" id="add" title="add">
+                <img class = "img" src = "images/plus.png">
+            </div>
+            <select id = "projects" style="font-size: large; font-weight: bold;">
+                <option value = "1" selected = "selected">Project 1</option>
+            </select><br><br>
+            <button id = "projectName" style="width: 60px; height: 40px;font-size: large; font-weight: bold;">Edit</button>
+            <br>
+            <h3>Font-Size</h3>
+            <select data-text = "fontSize" name="fontSize" id ="font-size" style="font-size: large; font-weight: bold;">
+                <option value = "10" >10</option>
+                <option value = "15">15</option>
+                <option value = "20" selected = "selected">20</option>
+                <option value= "25">25</option>
+                <option value= "30">30</option>
+                <option value= "35">35</option>
+            </select>
+            <br><h3>Font-Family</h3>
+            <select data-text = "fontFamily" name="fontFamily" id ="font-family" style="font-size: large; font-weight: bold;">
+                <option value = "Arial">Arial</option>
+                <option value= "Impact">Impact</option>
+            </select>
+            <div class ="tool active"data-tool = "brush" id="brush" title="brush">
+                <img class = "img" src = "images/brush.png">
+            </div>
+            <div class = "tool" data-tool = "eraser" id = "erasor" title="erasor">
+                <img class = "img" src = "images/eraser.png">
+            </div>
+            <div class ="tool" data-tool = "select" id="select" title="select">
+                <img class = "img" src = "images/select.png">
+            </div>
+            <div class ="tool" data-tool = "fill" id="fill" title="fill">
+                <img class = "img" src = "images/paint.png">
+            </div>
+            <div class = "tool" data-tool = "line" id = "line" title="line">
+                <img class = "img" src = "images/line.png">
+            </div>
+            <div class = "tool" data-tool = "rectangle" id = "rectangle" title="rectangle">
+                <img class = "img" src = "images/rectangle.png">
+            </div>
+            <div class = "tool" data-tool = "triangle" id = "triangle" title="triangle">
+                <img class = "img" src = "images/triangle.png">
+            </div>
+            <div class = "tool" data-tool = "circle" id = "circle" title="circle">
+                <img class = "img" src = "images/circle.png">
+            </div>
+            <div class = "tool" data-btn = "undo" id = "undo" title="undo">
+                <img class = "img" src = "images/undo.png">
+            </div>
+            <div class = "tool" data-btn = "redo" id = "redo" title="redo">
+                <img class = "img" src = "images/redo.png">
+            </div>
+        
+       
+
+        </div>
+
+
+        <canvas id = "canvas5" style="z-index: 0; position: absolute; left: 100px; top: 0; "></canvas>
+        <canvas id = "canvas4" style="z-index: 0; position: absolute; left: 100px; top: 0; "></canvas>
+        <canvas id = "canvas3" style="z-index: 0; position: absolute; left: 100px; top: 0; "></canvas>
+        <canvas id = "canvas2" style="z-index: 0; position: absolute; left: 100px; top: 0; "></canvas>
+        <canvas id = "canvas" style="z-index: 0; position: absolute; left: 100px; top: 0; " ></canvas>
+        
+        
+        <input type="button" data-btn = "rotate-btn" class="rotate-btn" id = "rotate-btn">
+        <input type="button" data-btn = "resize-btn" class="resize-btn" id = "resize-btn">
+        <input type="button" data-btn = "x-btn" class="x-btn" id = "x-btn">
+        <input type="button" data-btn = "text-btn" class="text-btn" id = "text-btn">
+        <input type="button" data-btn = "drag-btn" class="drag-btn" id = "drag-btn">
+
+        <textarea id = "textarea" style="display: none; font-size: 40px;"></textarea>
+
+        
+        <script src = "rect_class_test.js" type="module"></script>
+        <script src="paint_class.js" type="module"></script>    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="new_paint.js" type="module"></script>
+        <script src = "helperFunctions.js" type="module"></script>
+        
+
+    </body>
+    <div class = "footer">
+        
+        <input class = "RGB-box" type="button" id ="RGB-box" value = " " >
+        <input class = "slider"  type="range" id = "colorPick" title="colorPick" min = "0" max = "1530" value = "0">
+        <input class = "thickness" type="button" id ="thickness" value = " ">
+        <!-- <input class = "box" data-btn = "switch" id = "switch" type = "submit" value = ""> -->
+        <!-- <input class = "box" data-btn = "color-show" id = "color-show" type="button"> -->
+        
+        <div class = "slider-show" data-tool="slider-show" id = "slider-show" title="slider-show"></div>
+        
+    </div>
+</html>
